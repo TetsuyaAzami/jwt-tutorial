@@ -1,6 +1,6 @@
-package com.example.jwttutorial.jwtAuthenrication;
+package com.example.jwttutorial.jwtAuthentication.authentication;
 
-import com.example.jwttutorial.jwtAuthenrication.tokenManipulator.AuthTokenProducer;
+import com.example.jwttutorial.jwtAuthentication.tokenManipulator.AuthTokenProducer;
 
 public class SimpleIdProvider {
 

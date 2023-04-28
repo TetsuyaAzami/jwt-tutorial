@@ -1,10 +1,10 @@
-package com.example.jwttutorial.jwtAuthenrication.tokenManipulator;
+package com.example.jwttutorial.jwtAuthentication.tokenManipulator;
 
 import java.time.OffsetDateTime;
 import java.util.UUID;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.example.jwttutorial.jwtAuthenrication.User;
+import com.example.jwttutorial.jwtAuthentication.authentication.User;
 
 public class AuthTokenProducer {
 

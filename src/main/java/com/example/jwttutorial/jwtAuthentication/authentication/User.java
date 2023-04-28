@@ -1,4 +1,4 @@
-package com.example.jwttutorial.jwtAuthenrication;
+package com.example.jwttutorial.jwtAuthentication.authentication;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

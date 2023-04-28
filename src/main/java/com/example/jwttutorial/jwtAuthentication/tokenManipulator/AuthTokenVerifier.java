@@ -1,4 +1,4 @@
-package com.example.jwttutorial.jwtAuthenrication.tokenManipulator;
+package com.example.jwttutorial.jwtAuthentication.tokenManipulator;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;

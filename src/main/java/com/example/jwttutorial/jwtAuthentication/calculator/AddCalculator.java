@@ -1,6 +1,7 @@
-package com.example.jwttutorial.jwtAuthenrication.tokenManipulator;
+package com.example.jwttutorial.jwtAuthentication.calculator;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.example.jwttutorial.jwtAuthentication.tokenManipulator.AuthTokenVerifier;
 
 public class AddCalculator {
 

@@ -1,4 +1,4 @@
-package com.example.jwttutorial.jwtAuthenrication;
+package com.example.jwttutorial.jwtAuthentication.authentication;
 
 import java.util.List;
 

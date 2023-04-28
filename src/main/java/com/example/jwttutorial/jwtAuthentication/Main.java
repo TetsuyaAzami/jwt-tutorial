@@ -1,9 +1,11 @@
-package com.example.jwttutorial.jwtAuthenrication;
+package com.example.jwttutorial.jwtAuthentication;
 
-import com.example.jwttutorial.jwtAuthenrication.tokenManipulator.AddCalculator;
-import com.example.jwttutorial.jwtAuthenrication.tokenManipulator.AddOperator;
-import com.example.jwttutorial.jwtAuthenrication.tokenManipulator.AuthTokenProducer;
-import com.example.jwttutorial.jwtAuthenrication.tokenManipulator.AuthTokenVerifier;
+import com.example.jwttutorial.jwtAuthentication.authentication.SimpleIdProvider;
+import com.example.jwttutorial.jwtAuthentication.authentication.UserAuthenticator;
+import com.example.jwttutorial.jwtAuthentication.calculator.AddCalculator;
+import com.example.jwttutorial.jwtAuthentication.calculator.AddOperator;
+import com.example.jwttutorial.jwtAuthentication.tokenManipulator.AuthTokenProducer;
+import com.example.jwttutorial.jwtAuthentication.tokenManipulator.AuthTokenVerifier;
 
 public class Main {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.example.jwttutorial.jwtAuthenrication.tokenManipulator;
+package com.example.jwttutorial.jwtAuthentication.calculator;
 
 public class AddOperator {
 
