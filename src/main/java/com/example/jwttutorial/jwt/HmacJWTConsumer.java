@@ -29,23 +29,23 @@ public class HmacJWTConsumer {
 		}
 	}
 
-	public static void main(String[] args) {
-		//
-		String secretKey = System.getenv("SECRET_KEY");
-		DecodedJWT jwt = new HmacJWTConsumer(secretKey)
-				.verifyToken(new HmacJWTProvider(secretKey).generateToken());
+	// public static void main(String[] args) {
+	// 	//
+	// 	String secretKey = System.getenv("SECRET_KEY");
+	// 	DecodedJWT jwt = new HmacJWTConsumer(secretKey)
+	// 			.verifyToken(new HmacJWTProvider(secretKey).generateToken());
 
-		System.out.println("------Decoded JWT ---------");
-		System.out.println("alg: " + jwt.getAlgorithm());
-		System.out.println("content-type: " + jwt.getContentType());
-		System.out.println("typ: " + jwt.getType());
-		System.out.println("issuer: " + jwt.getIssuer());
-		System.out.println("subject: " + jwt.getSubject());
-		System.out.println("expiresAt:" + jwt.getExpiresAt());
-		System.out.println("issuerAt:" + jwt.getIssuedAt());
-		System.out.println("JWT-ID:" + jwt.getId());
-		System.out.println("email:" + jwt.getClaim("email").asString());
-		System.out.println("groups:" + jwt.getClaim("groups").asList(String.class).stream()
-				.collect(Collectors.joining(",")));
-	}
+	// 	System.out.println("------Decoded JWT ---------");
+	// 	System.out.println("alg: " + jwt.getAlgorithm());
+	// 	System.out.println("content-type: " + jwt.getContentType());
+	// 	System.out.println("typ: " + jwt.getType());
+	// 	System.out.println("issuer: " + jwt.getIssuer());
+	// 	System.out.println("subject: " + jwt.getSubject());
+	// 	System.out.println("expiresAt:" + jwt.getExpiresAt());
+	// 	System.out.println("issuerAt:" + jwt.getIssuedAt());
+	// 	System.out.println("JWT-ID:" + jwt.getId());
+	// 	System.out.println("email:" + jwt.getClaim("email").asString());
+	// 	System.out.println("groups:" + jwt.getClaim("groups").asList(String.class).stream()
+	// 			.collect(Collectors.joining(",")));
+	// }
 }
