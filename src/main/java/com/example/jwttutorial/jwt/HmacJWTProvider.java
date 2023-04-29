@@ -3,7 +3,6 @@ package com.example.jwttutorial.jwt;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTCreator.Builder;
 import com.auth0.jwt.algorithms.Algorithm;
 
 public class HmacJWTProvider {
