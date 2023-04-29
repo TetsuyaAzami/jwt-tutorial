@@ -7,7 +7,7 @@ import com.example.jwttutorial.jwtAuthentication.calculator.AddOperator;
 import com.example.jwttutorial.jwtAuthentication.tokenManipulator.AuthTokenProducer;
 import com.example.jwttutorial.jwtAuthentication.tokenManipulator.AuthTokenVerifier;
 
-public class Main {
+public class ConsoleAppMain {
 	public static void main(String[] args) {
 		// トークンの生成
 		String secretKey = System.getenv("SECRET_KEY");
