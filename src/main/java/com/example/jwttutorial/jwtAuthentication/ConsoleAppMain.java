@@ -14,7 +14,7 @@ public class ConsoleAppMain {
 		String id = args[0];
 		String name = args[1];
 		SimpleIdProvider idProvider =
-				new SimpleIdProvider(new UserAuthenticator(), new AuthTokenProducer(secretKey));
+				new SimpleIdProvider(new UserAuthenticator(), new AuthTokenProducer());
 
 		String publishedToken = idProvider.publishToken(id, name);
 		System.out.println(publishedToken);

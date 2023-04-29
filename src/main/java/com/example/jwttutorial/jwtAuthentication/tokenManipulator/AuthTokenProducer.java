@@ -2,17 +2,15 @@ package com.example.jwttutorial.jwtAuthentication.tokenManipulator;
 
 import java.time.OffsetDateTime;
 import java.util.UUID;
+import org.springframework.stereotype.Component;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.example.jwttutorial.jwtAuthentication.authentication.User;
 
+@Component
 public class AuthTokenProducer {
 
-	private String secretKey;
-
-	public AuthTokenProducer(String secretKey) {
-		this.secretKey = secretKey;
-	}
+	private String secretKey = System.getenv("SECRET_KEY");
 
 	public String generateToken(User user) {
 		//
