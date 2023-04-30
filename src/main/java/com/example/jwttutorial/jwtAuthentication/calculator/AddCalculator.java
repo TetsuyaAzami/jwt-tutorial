@@ -1,6 +1,6 @@
 package com.example.jwttutorial.jwtAuthentication.calculator;
 
-import com.auth0.jwt.interfaces.DecodedJWT;
+import com.example.jwttutorial.jwtAuthentication.httpRequestRecieveTutorial.authentication.DecodedAuthorizationToken;
 import com.example.jwttutorial.jwtAuthentication.tokenManipulator.AuthTokenVerifier;
 
 public class AddCalculator {
@@ -15,8 +15,8 @@ public class AddCalculator {
 
 	public void calculate(int left, int right, String token) {
 		//
-		DecodedJWT decodedJwt = verifier.verifyToken(token);
+		DecodedAuthorizationToken decodedToken = this.verifier.verifyToken(token);
 		int result = addOperator.operate(left, right);
-		System.out.println(decodedJwt.getClaim("name").asString() + "さんが依頼したオペレーションの結果は" + result + "です");
+		System.out.println(decodedToken.token().getClaim("name").asString() + "さんが依頼したオペレーションの結果は" + result + "です");
 	}
 }

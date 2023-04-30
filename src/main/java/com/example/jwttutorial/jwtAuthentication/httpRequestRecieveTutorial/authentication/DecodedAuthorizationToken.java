@@ -6,13 +6,30 @@ public class DecodedAuthorizationToken {
 
 	private DecodedJWT decodedJWT;
 
+	public static final String REQUEST_KEY = "decodedToken";
+
 	public DecodedAuthorizationToken(DecodedJWT decodedJWT) {
 		//
 		this.decodedJWT = decodedJWT;
 	}
 
-	public String token() {
+	public DecodedJWT token() {
 		//
-		return this.decodedJWT.getToken();
+		return this.decodedJWT;
+	}
+
+	public String userId() {
+		//
+		return this.decodedJWT.getSubject();
+	}
+
+	public String password() {
+		//
+		return this.decodedJWT.getClaim("password").asString();
+	}
+
+	public String name() {
+		//
+		return this.decodedJWT.getClaim("name").asString();
 	}
 }

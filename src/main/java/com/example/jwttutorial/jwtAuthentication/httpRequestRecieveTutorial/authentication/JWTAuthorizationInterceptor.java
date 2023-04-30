@@ -27,7 +27,8 @@ public class JWTAuthorizationInterceptor implements HandlerInterceptor {
 			return true;
 
 		try {
-			authorize(request);
+			DecodedAuthorizationToken decodedToken = authorize(request);
+			request.setAttribute(DecodedAuthorizationToken.REQUEST_KEY, decodedToken);
 		} catch (JWTVerificationException e) {
 			throw new ResponseStatusException(HttpStatus.FORBIDDEN, e.getMessage());
 		}
@@ -35,10 +36,10 @@ public class JWTAuthorizationInterceptor implements HandlerInterceptor {
 		return true;
 	}
 
-	private void authorize(HttpServletRequest request) {
+	private DecodedAuthorizationToken authorize(HttpServletRequest request) {
 		//
 		String authorizationHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
 		AuthorizationToken token = new AuthorizationToken(authorizationHeader);
-		DecodedAuthorizationToken decodedToken = this.tokenVerifier.verifyToken(token.value());
+		return this.tokenVerifier.verifyToken(token.value());
 	}
 }

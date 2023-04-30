@@ -28,6 +28,7 @@ public class AuthenticationController {
 		this.tokenProducer = tokenProducer;
 	}
 
+	@NonAuthorize
 	@PostMapping(value = "/auth", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> jwtAuthentication(@RequestBody User user) {
 		//

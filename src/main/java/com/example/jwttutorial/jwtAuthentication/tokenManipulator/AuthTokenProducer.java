@@ -21,9 +21,8 @@ public class AuthTokenProducer {
 						.withExpiresAt(OffsetDateTime.now().plusDays(60).toInstant())
 						.withIssuedAt(OffsetDateTime.now().toInstant())
 						.withJWTId(UUID.randomUUID().toString()).withClaim("name", user.getName())
-						.sign(alg);
+						.withClaim("password", user.getPassword()).sign(alg);
 
 		return "Bearer " + token;
 	}
-
 }
