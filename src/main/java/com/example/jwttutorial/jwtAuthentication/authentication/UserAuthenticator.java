@@ -13,6 +13,6 @@ public class UserAuthenticator {
 
 			public User authenticate(String id, String password) throws IllegalArgumentException {
 				//
-				return USERS.stream().filter(user -> user.getId().equals(id)).filter(user -> user.getPassword().equals(password)).findFirst().orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "一致するユーザが登録されていません。"));
+				return USERS.stream().filter(user -> user.getId().equals(id)).filter(user -> user.getPassword().equals(password)).findFirst().orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "一致するユーザが登録されていません。"));
 			}
 }

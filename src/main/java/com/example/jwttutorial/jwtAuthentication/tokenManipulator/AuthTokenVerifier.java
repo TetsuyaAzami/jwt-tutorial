@@ -4,7 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.auth0.jwt.interfaces.DecodedJWT;
+import com.example.jwttutorial.jwtAuthentication.httpRequestRecieveTutorial.authentication.DecodedAuthorizationToken;
 
 public class AuthTokenVerifier {
 
@@ -16,10 +16,10 @@ public class AuthTokenVerifier {
 				.acceptExpiresAt(5).build();
 	}
 
-	public DecodedJWT verifyToken(String token) {
+	public DecodedAuthorizationToken verifyToken(String token) {
 		//
 		try {
-			return this.verifier.verify(token);
+			return new DecodedAuthorizationToken(this.verifier.verify(token));
 		} catch (JWTVerificationException ex) {
 			System.out.println("authentication failed");
 			throw ex;

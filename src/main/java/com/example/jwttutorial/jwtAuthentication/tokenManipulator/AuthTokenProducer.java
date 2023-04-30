@@ -23,7 +23,7 @@ public class AuthTokenProducer {
 						.withJWTId(UUID.randomUUID().toString()).withClaim("name", user.getName())
 						.sign(alg);
 
-		return token;
+		return "Bearer " + token;
 	}
 
 }
